@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exercício 01</ion-title>
+    <h3>
+      Faça um aplicativo, usando ionic, que permita o usuário digitar o nome do aluno e suas 5 notas.
+      Calcule a média das notas e mostre: o nome do aluno, a média calculada e uma mensagem "APROVADO"
+      se a média for maior ou igual a 5 e "REPROVADO" se a média for menor que 5.
+    </h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Digite o nome do aluno</ion-label>
+    <ion-input type="text" [(ngModel)]='nome'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Digite a 1º nota do aluno</ion-label>
+    <ion-input type="number" [(ngModel)]="nota1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Digite a 2º nota do aluno</ion-label>
+    <ion-input type="number" [(ngModel)]="nota2"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Digite a 3º nota do aluno</ion-label>
+    <ion-input type="number" [(ngModel)]="nota3"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Digite a 4º nota do aluno</ion-label>
+    <ion-input type="number" [(ngModel)]="nota4"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Digite a 5º nota do aluno</ion-label>
+    <ion-input type="number" [(ngModel)]="nota5"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="media()" color="primary">Calcular Média</ion-button>
+
+  <ion-item>
+    <ion-label position="floating"></ion-label>
+    <ion-input type="number" [(ngModel)]="resultado"></ion-input>
+    <strong>{{ msg }}</strong>
+  </ion-item>
+
+</ion-content>

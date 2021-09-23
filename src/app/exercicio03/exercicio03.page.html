@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exercício 03</ion-title>
+    <h3>
+      Um dos sócios da empresa UPSTREAM LTDA necessita que seja desenvolvido um aplicativo mobile capaz de
+      calcular o reajuste salarial dos funcionários da empresa O aplicativo deverá permitir que o usuário
+      digite o salário atual do funcionário e valor percentual que deve ser incrementado para aquele funcionário,
+      pois ele irá aplicar valores percentuais diferentes a cada funcionário.
+    </h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">Digite o salário atual</ion-label>
+    <ion-input type="number" [(ngModel)]='atual'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Digite a porcentagem de reajuste salarial</ion-label>
+    <ion-input type="number" [(ngModel)]='reajuste'></ion-input>
+  </ion-item>
+
+  <ion-button (click)="reajustesalarial()" color="second">Calcular Reajuste Salarial</ion-button>
+
+  <ion-item>
+    <ion-label position="floating"></ion-label>
+    <ion-input type="number" [(ngModel)]="salariofinal"></ion-input>
+    <strong> {{ msg }} </strong>
+  </ion-item>
+
+</ion-content>

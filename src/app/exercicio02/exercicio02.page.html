@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exercício 02</ion-title>
+    <h3>
+      Um banco concederá um crédito especial aos seus clientes, variável com o saldo médio no último ano. Faça um
+      aplicativo, usando ionic, que permita ao usuário digitar o saldo médio de um cliente e calcule o valor do crédito
+      de acordo com a tabela abaixo.
+      Mostre uma mensagem informando o saldo médio e o valor do crédito. Saldo médio,Percentual de 0 a 500 nenhum
+      crédito
+      de 501 a 1000 20% do valor do saldo médio, de 1001 a 2000 30% do valor do saldo médio, acima de 2000 40% do valor
+      do saldo médio
+    </h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Digite o saldo médio</ion-label>
+    <ion-input type="number" [(ngModel)]='saldomedio'></ion-input>
+  </ion-item>
+
+  <ion-button (click)="valorcredito()" color="second">Calcular Crédito</ion-button>
+
+  <ion-item>
+    <ion-label position="floating"></ion-label>
+    <ion-input type="number" [(ngModel)]="saldofinal"></ion-input>
+    <strong>O saldo médio é {{ saldomedio }}, e seu crédito é {{ saldofinal }}</strong>
+  </ion-item>
+
+
+</ion-content>
